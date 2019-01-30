@@ -1,17 +1,15 @@
 ---
-title: "Day Two: Basic Probability"
+title: "Days Two and Three: Probability"
 output: pdf_document
 ---
-
-## The Task
+## Task 1
 In a single toss of two fair (evenly-weighted) six-sided dice, find the probability that their sum will be at most 9.
 
-## Solution
-
+### Solution
 The possible outcomes for this game are the set of numbers from 2 to 12.
 
 There are 6 ways the first dice can land and 6 ways the second dice can land.
-Since 6 * 6 = 36, there are 36 total ways the dice can land. How many ways have a sum less than or equal to 9?
+Since 6 x 6 = 36, there are 36 total ways the dice can land. How many ways have a sum less than or equal to 9?
 
 Instead of looking at the number of ways the sum will be less than 9, we can look at the number of ways the sum will equal more than 9. Then, we can subtract that value from 36 to get our answer.
 
@@ -28,8 +26,103 @@ As we can see, there are 6 outcomes that yield a result greater than 9. That mea
 
 Since we're looking for the probability that the sum will be at most 9, and every outcome is equally likely, the answer to this question is 30/36. This, of course, can be simplified to 5/6.
 
-## Final Answer
+### Final Answer
 The probability is 5/6.
+
+## Task 2
+In a single toss of two fair (evenly-weighted) six-sided dice, find the probability that the values rolled by each die will be different and the two dice have a sum of 6.
+
+### Solution
+If we don't know how to approach a problem, it's easiest to to just start out by enumerating some of the possibilities and see if a pattern emerges.
+
+
+| Outcome | Dice #1 | Dice #2 | 
+|---------|---------|---------|
+| 1       | 1       | 5       | 
+| 2       | 2       | 4       |
+| 3       | 4       | 2       | 
+| 4       | 5       | 1       | 
+       
+We can actually stop here because we see that since the sum must equal 6, we have actually already listed out all the possibilities. There are only 4 ways the sum of these two dice can equal six. (We must reject the 3 and 3 possibility because they are the same number.) We know from our work in task one that the total number of possible outcomes is 36. Therefore, the answer to this question is 4/36 = 1/9.
+
+### Final Answer
+The probability is 1/9.
+
+## Task 3
+There are 3 urns labeled X, Y, and Z. 
+
+Urn X contains 4 red balls and 3 black balls.
+Urn Y contains 5 red balls and 4 black balls.
+Urn Z contains 4 red balls and 4 black balls. 
+
+One ball is drawn from each of the 3 urns. What is the probability that, of the 3 balls drawn, 2 are red and 1 is black?
+
+## Solution
+
+### Set up
+This may seem tricky at first glance due to the volume of information presented in the question prompt. One place to start is to notice that each draw only has two possible outcomes: 
+
+\begin{enumerate}
+    \item We draw a red ball.
+    \item We draw a black ball.
+\end{enumerate}
+
+Since there are only 3 draws, we are left with 6 possible outcomes. (3 x 2 = 6)
+
+| Outcome #1 | Outcome #2 | Outcome #3 | Outcome #4 | Outcome #5 | Outcome #6 |
+|------------|------------|------------|------------|------------|------------|
+| Red        | Red        | Red        | Black      | Black      | Black      |
+| Red        | Red        | Black      | Red        | Black      | Black      |
+| Red        | Black      | Red        | Red        | Red        | Black      |
+
+We are only interested in the probability of the outcomes where two draws are red, and one draw is black. These are outcomes 2,3, and 4. Let's calculate the likely hood that those will happen. To do this we must first calculate the probability of each individual outcome, and then sum them together.
+
+### Probability of Outcome 2
+Outcome 2 involves drawing a red ball from Urn X, a red ball from Urn Y, and a black ball from Urn Z. 
+
+Since there are 4 red balls and 3 black balls P(Red in X) = 4/7.
+Since there are 5 red balls and 4 black balls P(Red in Y) = 5/9.
+Since there are 4 red balls and 4 black balls P(Black in Z) = 4/8 = 1/2.
+
+The probability of Outcome 2 is the product of the probability of getting our desired draw in each Urn.
+4/7 x 5/9 x 1/2 = 20/126 = 10/63.
+
+We follow a similar process for the other two outcomes.
+
+### Probability of Outcome 3
+Outcome 3 involves drawing a red ball from Urn X, a black ball from Urn Y, and a red ball from Urn Z.
+
+Since there are 4 red balls and 3 black balls P(Red in X) = 4/7.
+Since there are 5 red balls and 4 black balls P(Black in Y) = 4/9.
+Since there are 4 red balls and 4 black balls P(Red in Z) = 4/8 = 1/2. 
+
+Just like when we calculated the P(Outcome 2), the P(Outcome 3) is the product of the probability of getting our desired draw in each Urn.
+
+4/7 x 4/9 x 1/2 = 16/126 = 8/63.
+
+We follow the exact same procedure to calculate P(Outcome 4).
+
+### Probability of Outcome 4
+Outcome 4 involves drawing a black ball from Urn X, a red ball from Urn Y, and a red ball from Urn Z.
+
+Since there are 4 red balls and 3 black balls P(Black in X) = 3/7.
+Since there are 5 red balls and 4 black balls P(Red in Y) = 5/9.
+Since there are 4 red balls and 4 black balls P(Red in Z) = 4/8 = 1/2.
+
+We complete the process of calculating the probability of individual outcomes by calculating the product of the probability of getting our desired draws in each urn.
+
+3/7 x 5/9 x 1/2 = 15/126 = 5/42.
+
+### Summing the probability
+The last step of the process is to add up the probabilities of each outcome occuring to get the answer to this question: "What is the probability that, of the 3 balls drawn, 2 are red and 1 is black?"
+
+P(Outcome 1) + P(Outcome 2) + P(Outcome 3) = 10/63 + 8/63 + 5/42 = 17/42.
+
+## Answer
+The probability of drawing 2 red and 1 black is 17/42.
+
+
+
 
 
 
