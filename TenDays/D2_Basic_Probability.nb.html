@@ -246,8 +246,8 @@ $(document).ready(function () {
 <div id="solution" class="section level2">
 <h2>Solution</h2>
 <p>The possible outcomes for this game are the set of numbers from 2 to 12.</p>
-<p>There are 6 ways the first dice can land and 6 ways the 2nd dice can land Since 6 * 6 = 36, There are 36 total ways the dice can land. How many ways have a sum less than 9?</p>
-<p>Instead of looking at the number of ways the sum will be less than 9, we can look at the number of ways the dice equal more than 9. Then, we can subtract that value from 36 to get our answer.</p>
+<p>There are 6 ways the first dice can land and 6 ways the second dice can land. Since 6 * 6 = 36, there are 36 total ways the dice can land. How many ways have a sum less than or equal to 9?</p>
+<p>Instead of looking at the number of ways the sum will be less than 9, we can look at the number of ways the sum will equal more than 9. Then, we can subtract that value from 36 to get our answer.</p>
 <table>
 <thead>
 <tr class="header">
@@ -296,7 +296,7 @@ $(document).ready(function () {
 </tr>
 </tbody>
 </table>
-<p>As we can see, there are 6 outcomes that yield a result greater than 9. That means the there are 36-6, or 30 different ways the sum will be at most 9.</p>
+<p>As we can see, there are 6 outcomes that yield a result greater than 9. That means there are 36 - 6 = 30 different ways the sum will be at most 9.</p>
 <p>Since we’re looking for the probability that the sum will be at most 9, and every outcome is equally likely, the answer to this question is 30/36. This, of course, can be simplified to 5/6.</p>
 </div>
 <div id="final-answer" class="section level2">
@@ -305,7 +305,7 @@ $(document).ready(function () {
 <!-- rnb-text-end -->
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiRGF5IFR3bzogQmFzaWMgUHJvYmFiaWxpdHkiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KCiMjIFRoZSBUYXNrCkluIGEgc2luZ2xlIHRvc3Mgb2YgdHdvIGZhaXIgKGV2ZW5seS13ZWlnaHRlZCkgc2l4LXNpZGVkIGRpY2UsIGZpbmQgdGhlIHByb2JhYmlsaXR5IHRoYXQgdGhlaXIgc3VtIHdpbGwgYmUgYXQgbW9zdCA5LgoKIyMgU29sdXRpb24KClRoZSBwb3NzaWJsZSBvdXRjb21lcyBmb3IgdGhpcyBnYW1lIGFyZSB0aGUgc2V0IG9mIG51bWJlcnMgZnJvbSAyIHRvIDEyLgoKVGhlcmUgYXJlIDYgd2F5cyB0aGUgZmlyc3QgZGljZSBjYW4gbGFuZCBhbmQgNiB3YXlzIHRoZSAybmQgZGljZSBjYW4gbGFuZApTaW5jZSA2ICogNiA9IDM2LCBUaGVyZSBhcmUgMzYgdG90YWwgd2F5cyB0aGUgZGljZSBjYW4gbGFuZC4gSG93IG1hbnkgd2F5cyBoYXZlIGEgc3VtIGxlc3MgdGhhbiA5PwoKSW5zdGVhZCBvZiBsb29raW5nIGF0IHRoZSBudW1iZXIgb2Ygd2F5cyB0aGUgc3VtIHdpbGwgYmUgbGVzcyB0aGFuIDksIHdlIGNhbiBsb29rIGF0IHRoZSBudW1iZXIgb2Ygd2F5cyB0aGUgZGljZSBlcXVhbCBtb3JlIHRoYW4gOS4gVGhlbiwgd2UgY2FuIHN1YnRyYWN0IHRoYXQgdmFsdWUgZnJvbSAzNiB0byBnZXQgb3VyIGFuc3dlci4KCk91dGNvbWUgIERpY2UgIzEgIERpY2UgIzIgIFRvdGFsICAgICAKLS0tLS0tLS0gLS0tLS0tLS0gLS0tLS0tLS0gLS0tLS0tLS0gICAKICAgICAgIDEgICAgICAgIDYgICAgICAgIDYgICAgICAgMTIKICAgICAgIDIgICAgICAgIDYgICAgICAgIDUgICAgICAgMTEKICAgICAgIDMgICAgICAgIDYgICAgICAgIDQgICAgICAgMTAKICAgICAgIDQgICAgICAgIDUgICAgICAgIDYgICAgICAgMTEKICAgICAgIDUgICAgICAgIDUgICAgICAgIDUgICAgICAgMTAKICAgICAgIDYgICAgICAgIDQgICAgICAgIDYgICAgICAgMTAKCkFzIHdlIGNhbiBzZWUsIHRoZXJlIGFyZSA2IG91dGNvbWVzIHRoYXQgeWllbGQgYSByZXN1bHQgZ3JlYXRlciB0aGFuIDkuIFRoYXQgbWVhbnMgdGhlIHRoZXJlIGFyZSAzNi02LCBvciAzMCBkaWZmZXJlbnQgd2F5cyB0aGUgc3VtIHdpbGwgYmUgYXQgbW9zdCA5LgoKU2luY2Ugd2UncmUgbG9va2luZyBmb3IgdGhlIHByb2JhYmlsaXR5IHRoYXQgdGhlIHN1bSB3aWxsIGJlIGF0IG1vc3QgOSwgYW5kIGV2ZXJ5IG91dGNvbWUgaXMgZXF1YWxseSBsaWtlbHksIHRoZSBhbnN3ZXIgdG8gdGhpcyBxdWVzdGlvbiBpcyAzMC8zNi4gVGhpcywgb2YgY291cnNlLCBjYW4gYmUgc2ltcGxpZmllZCB0byA1LzYuCgojIyBGaW5hbCBBbnN3ZXIKVGhlIHByb2JhaWxpdHkgaXMgNS82LgoKCgoK</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiRGF5IFR3bzogQmFzaWMgUHJvYmFiaWxpdHkiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KCiMjIFRoZSBUYXNrCkluIGEgc2luZ2xlIHRvc3Mgb2YgdHdvIGZhaXIgKGV2ZW5seS13ZWlnaHRlZCkgc2l4LXNpZGVkIGRpY2UsIGZpbmQgdGhlIHByb2JhYmlsaXR5IHRoYXQgdGhlaXIgc3VtIHdpbGwgYmUgYXQgbW9zdCA5LgoKIyMgU29sdXRpb24KClRoZSBwb3NzaWJsZSBvdXRjb21lcyBmb3IgdGhpcyBnYW1lIGFyZSB0aGUgc2V0IG9mIG51bWJlcnMgZnJvbSAyIHRvIDEyLgoKVGhlcmUgYXJlIDYgd2F5cyB0aGUgZmlyc3QgZGljZSBjYW4gbGFuZCBhbmQgNiB3YXlzIHRoZSBzZWNvbmQgZGljZSBjYW4gbGFuZC4KU2luY2UgNiAqIDYgPSAzNiwgdGhlcmUgYXJlIDM2IHRvdGFsIHdheXMgdGhlIGRpY2UgY2FuIGxhbmQuIEhvdyBtYW55IHdheXMgaGF2ZSBhIHN1bSBsZXNzIHRoYW4gb3IgZXF1YWwgdG8gOT8KCkluc3RlYWQgb2YgbG9va2luZyBhdCB0aGUgbnVtYmVyIG9mIHdheXMgdGhlIHN1bSB3aWxsIGJlIGxlc3MgdGhhbiA5LCB3ZSBjYW4gbG9vayBhdCB0aGUgbnVtYmVyIG9mIHdheXMgdGhlIHN1bSB3aWxsIGVxdWFsIG1vcmUgdGhhbiA5LiBUaGVuLCB3ZSBjYW4gc3VidHJhY3QgdGhhdCB2YWx1ZSBmcm9tIDM2IHRvIGdldCBvdXIgYW5zd2VyLgoKT3V0Y29tZSAgRGljZSAjMSAgRGljZSAjMiAgVG90YWwgICAgIAotLS0tLS0tLSAtLS0tLS0tLSAtLS0tLS0tLSAtLS0tLS0tLSAgIAogICAgICAgMSAgICAgICAgNiAgICAgICAgNiAgICAgICAxMgogICAgICAgMiAgICAgICAgNiAgICAgICAgNSAgICAgICAxMQogICAgICAgMyAgICAgICAgNiAgICAgICAgNCAgICAgICAxMAogICAgICAgNCAgICAgICAgNSAgICAgICAgNiAgICAgICAxMQogICAgICAgNSAgICAgICAgNSAgICAgICAgNSAgICAgICAxMAogICAgICAgNiAgICAgICAgNCAgICAgICAgNiAgICAgICAxMAoKQXMgd2UgY2FuIHNlZSwgdGhlcmUgYXJlIDYgb3V0Y29tZXMgdGhhdCB5aWVsZCBhIHJlc3VsdCBncmVhdGVyIHRoYW4gOS4gVGhhdCBtZWFucyB0aGVyZSBhcmUgMzYgLSA2ID0gMzAgZGlmZmVyZW50IHdheXMgdGhlIHN1bSB3aWxsIGJlIGF0IG1vc3QgOS4KClNpbmNlIHdlJ3JlIGxvb2tpbmcgZm9yIHRoZSBwcm9iYWJpbGl0eSB0aGF0IHRoZSBzdW0gd2lsbCBiZSBhdCBtb3N0IDksIGFuZCBldmVyeSBvdXRjb21lIGlzIGVxdWFsbHkgbGlrZWx5LCB0aGUgYW5zd2VyIHRvIHRoaXMgcXVlc3Rpb24gaXMgMzAvMzYuIFRoaXMsIG9mIGNvdXJzZSwgY2FuIGJlIHNpbXBsaWZpZWQgdG8gNS82LgoKIyMgRmluYWwgQW5zd2VyClRoZSBwcm9iYWlsaXR5IGlzIDUvNi4KCgoKCg==</div>
 
 
 

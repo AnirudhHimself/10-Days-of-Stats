@@ -1,6 +1,6 @@
 ---
 title: "Day Two: Basic Probability"
-output: html_notebook
+output: pdf_document
 ---
 
 ## The Task
@@ -10,10 +10,10 @@ In a single toss of two fair (evenly-weighted) six-sided dice, find the probabil
 
 The possible outcomes for this game are the set of numbers from 2 to 12.
 
-There are 6 ways the first dice can land and 6 ways the 2nd dice can land
-Since 6 * 6 = 36, There are 36 total ways the dice can land. How many ways have a sum less than 9?
+There are 6 ways the first dice can land and 6 ways the second dice can land.
+Since 6 * 6 = 36, there are 36 total ways the dice can land. How many ways have a sum less than or equal to 9?
 
-Instead of looking at the number of ways the sum will be less than 9, we can look at the number of ways the dice equal more than 9. Then, we can subtract that value from 36 to get our answer.
+Instead of looking at the number of ways the sum will be less than 9, we can look at the number of ways the sum will equal more than 9. Then, we can subtract that value from 36 to get our answer.
 
 Outcome  Dice #1  Dice #2  Total     
 -------- -------- -------- --------   
@@ -24,12 +24,12 @@ Outcome  Dice #1  Dice #2  Total
        5        5        5       10
        6        4        6       10
 
-As we can see, there are 6 outcomes that yield a result greater than 9. That means the there are 36-6, or 30 different ways the sum will be at most 9.
+As we can see, there are 6 outcomes that yield a result greater than 9. That means there are 36 - 6 = 30 different ways the sum will be at most 9.
 
 Since we're looking for the probability that the sum will be at most 9, and every outcome is equally likely, the answer to this question is 30/36. This, of course, can be simplified to 5/6.
 
 ## Final Answer
-The probaility is 5/6.
+The probability is 5/6.
 
 
 
