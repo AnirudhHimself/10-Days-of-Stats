@@ -154,13 +154,19 @@ You draw 2 cards from a standard 52-card deck *without* replacing them. What is 
 
 We know there are 52 cards in a deck, 13 cards in each suit, and 4 possible suits. If we draw one card, then it will be one of the 4 possible suits. There will be 51 cards left in the deck, 12 of which are the suit that we have in our hand. The probability of drawing that card is 12/51. Which we can simplify to 4/17 or roughly 23.52%. Pretty good odds actually!
 
-##
-Answer
+## Answer
 The Probability is 4/17 or approximately 23.52%
 
 
 
+# Task 6
+A bag contains 3 red marbles and 4 blue marbles. Then, 2 marbles are drawn from the bag, at random, without replacement. If the first marble drawn is red, what is the probability that the second marble is blue?
 
+## Solution
+We have already drawn the first marble and we know it is red. This means that there are 2 red marbles, and 4 blue marbles remaining in the bag. The probability that the second marble is blue will be the number of blue marbles divided by the total number of marbles remaining in the bag. The probability is 4/6 or simplified to 2/3.
+
+# Answer
+The probability is 2/3.
 
 
 
